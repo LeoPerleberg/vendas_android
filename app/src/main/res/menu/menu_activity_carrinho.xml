@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuitem_cancelar_pedido"
+        android:icon="@drawable/ic_action_discard"
+        app:showAsAction="always"
+        android:title="@string/title_menu_cancelar_pedido" />
+
+    <item
+        android:id="@+id/menuitem_finalizar_pedido"
+        android:icon="@drawable/ic_action_accept"
+        app:showAsAction="always"
+        android:title="@string/title_menu_finalizar_pedido" />
+
+</menu>

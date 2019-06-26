@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.edu.ifsul.vendas">
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- Para o leitor de código de barras -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- para acesso ao cartão sd -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_inicio"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_inicio"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.PedidosActivity"
+            android:label="Pedidos"/>
+        <activity
+            android:name=".activity.ClienteAdminActivity"
+            android:label="Cadastro de cliente"/>
+        <activity
+            android:name=".activity.ProdutoAdminActivity"
+            android:label="Cadastro de produto"/>
+        <activity
+            android:name=".activity.SobreActivity"
+            android:label="Sobre"/>
+        <activity
+            android:name=".activity.CarrinhoActivity"
+            android:label="Carrinho"/>
+        <activity
+            android:name=".activity.ProdutoDetalheActivity"
+            android:label="Detalhes"/>
+        <activity
+            android:name=".activity.ClientesActivity"
+            android:label="Clientes"/>
+        <activity
+            android:name=".activity.ProdutosActivity"
+            android:label="Produtos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="Login e cadastro">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".barcode.BarcodeCaptureActivity"
+            android:label="Codigo de barras"/>
+    </application>
+
+</manifest>
