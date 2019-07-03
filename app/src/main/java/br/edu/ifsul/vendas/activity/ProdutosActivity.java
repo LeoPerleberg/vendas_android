@@ -65,6 +65,10 @@ public class ProdutosActivity extends AppCompatActivity implements NavigationVie
         navigationView.setNavigationItemSelectedListener(this);
 
 
+        if (AppSetup.user.getFuncao().equals("admin")) {
+            navigationView.getMenu().findItem(R.id.admin_option).setVisible(true);
+        }
+
 
         lvProdutos = findViewById(R.id.lv_produtos);
         lvProdutos.setOnItemClickListener(new AdapterView.OnItemClickListener() {

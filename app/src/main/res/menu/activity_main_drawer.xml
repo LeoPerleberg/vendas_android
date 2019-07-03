@@ -19,7 +19,7 @@
     </group>
     <group android:checkableBehavior="single">
         <item android:title="Administração"
-            android:id="@+id/admin"
+            android:id="@+id/admin_option"
             android:visible="false" >
             <menu>
                 <item
