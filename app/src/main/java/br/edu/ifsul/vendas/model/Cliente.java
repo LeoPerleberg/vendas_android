@@ -11,6 +11,18 @@ public class Cliente implements Serializable {
     private boolean situacao;
     private String key; //atributo apenas local
 
+//    private List<String> pedidos;
+//
+//    public List<String> getPedidos() {
+//        return pedidos;
+//    }
+//
+//    public void setPedidos(List<String> pedidos) {
+//        this.pedidos = pedidos;
+//    }
+
+
+
     public Cliente() {
     }
 

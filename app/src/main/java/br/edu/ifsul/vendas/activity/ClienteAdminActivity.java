@@ -48,6 +48,7 @@ public class ClienteAdminActivity extends AppCompatActivity {
     private static final int RC_BARCODE_CAPTURE = 1, RC_GALERIA_IMAGE_PICK = 2;
     private EditText etCodigoDeBarras, etNome, etSobrenome, etCpf;
     private Button btSalvar;
+    private Button btVerPedidos;
     private ImageView imvFoto;
     private Cliente cliente;
     private byte[] fotoCliente = null; //foto do produto
@@ -77,6 +78,7 @@ public class ClienteAdminActivity extends AppCompatActivity {
         etSobrenome = findViewById(R.id.etSobrenomeClienteTelaAdmin);
         etCpf = findViewById(R.id.etCPFClienteTelaAdmin);
         btSalvar = findViewById(R.id.btSalvarClienteTelaAdmin);
+        btVerPedidos = findViewById(R.id.bt_verPedidos);
         imvFoto = findViewById(R.id.imvFotoClienteTelaAdmin);
         imbPesquisar = findViewById(R.id.imbPesquisar_clienteAdmin);
         pbFoto = findViewById(R.id.pb_foto_cliente_admin);
@@ -124,6 +126,15 @@ public class ClienteAdminActivity extends AppCompatActivity {
                     Snackbar.make(findViewById(R.id.container_activity_produtoadmin), R.string.snack_preencher_todos_campos, Snackbar.LENGTH_LONG).show();
                 }
 
+            }
+        });
+
+        btVerPedidos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ClienteAdminActivity.this, PedidosActivity.class);
+                intent.putExtra("cliente", cliente.getKey());
+                startActivity(intent);
             }
         });
 
